@@ -10,6 +10,7 @@ let inputStrUpper = 'AAACC91EE';
 let inputStrMixedCase = 'AAAcc91EEff';
 let inputStrMixedAlternate = 'AaAcC91EeFf';
 
+
 describe('App', () => {
     
     describe('removes duplicated characters from a string', () => {
@@ -29,6 +30,8 @@ describe('App', () => {
            expect(app.removeDuplicateChars(inputStrMixedAlternate)).to.equal(inputStrMixedAlternate); 
         })
         
-        
+        it('removes mixed chars', () => {
+           expect(app.removeDuplicateChars(inputStr)).to.equal('Ac91%cWwWkLq$1ci3_848v3d_K'); 
+        })
     })
 })
