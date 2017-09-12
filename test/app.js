@@ -62,9 +62,14 @@ describe('App', () => {
     })
     
     describe('check for length of output strings', () => {
-        it('expects max 15 char for the output string', ()=> {
+        it('expects max 15 char for the output string with input string larger than 15 chars', ()=> {
             expect(app.processInputStr(inputStr).length).to.be.at.most(App.OUTPUT_SIZE);
         })
+        
+        it('expects less than 15 char for the output string with input string less 15 chars', ()=> {
+            expect(app.processInputStr(inputStrMixedAlternate).length).to.be.at.most(App.OUTPUT_SIZE);
+        })
+        
     })
 
 
