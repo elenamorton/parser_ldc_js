@@ -23,9 +23,17 @@ class App {
     
     processInputStr(str) {
         let removedDup = this.removeDuplicateChars(str);
-        let removedExtras = this.removeExtraChars(removedDup, OTHER_CHARS_TO_REMOVE);
-        let output = this.replaceChars(removedExtras, DOLLAR, POUND);
+        let removedExtras;
+        let output;
         
+        if (!!removedDup) {
+            removedExtras = this.removeExtraChars(removedDup, OTHER_CHARS_TO_REMOVE);
+        }
+        
+        if (!!removedExtras) {
+            output = this.replaceChars(removedExtras, DOLLAR, POUND);
+        }
+
         if (!!output) {
             return output.length <= OUTPUT_SIZE ? output : output.slice(0, OUTPUT_SIZE)
         } else {
