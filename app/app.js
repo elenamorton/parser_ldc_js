@@ -2,7 +2,7 @@ const OUTPUT_SIZE = 15;
 const DOLLAR = '$';
 const POUND = '£'
 const OTHER_CHARS_TO_REMOVE = [4, '_'];
-const DEFAULT_RESULT = '';
+const DEFAULT_RESULT = '##@@$$__%__$$@@##';
 
 class App {
     
