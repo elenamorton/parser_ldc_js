@@ -22,9 +22,13 @@ class App {
     }
     
     processInputStr(str) {
-        let removedDup = this.removeDuplicateChars(str);
+        let removedDup;
         let removedExtras;
         let output;
+        
+        if (!!str) {
+            removedDup = this.removeDuplicateChars(str);
+        }
         
         if (!!removedDup) {
             removedExtras = this.removeExtraChars(removedDup, OTHER_CHARS_TO_REMOVE);
