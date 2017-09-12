@@ -1,4 +1,7 @@
 const OUTPUT_SIZE = 15;
+const DOLLAR = '$';
+const POUND = '£'
+const OTHER_CHARS_TO_REMOVE = [4, '_'];
 
 class App {
     
@@ -15,6 +18,10 @@ class App {
     replaceChars(str, charToBeChanged, charThatChange) {
         var re = new RegExp('[' + charToBeChanged + ']', "g");
         return str.replace(re, charThatChange)
+    }
+    
+    processInputStr(str) {
+        
     }
     
     static get OUTPUT_SIZE() {
