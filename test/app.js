@@ -11,6 +11,7 @@ let inputStrMixedCase = 'AAAcc91EEff';
 let inputStrMixedAlternate = 'AaAcC91_EeFf';
 let inputStrSizeLimit = 'AAAcc4%WWWLq$11i3_843d__K';
 let inputStrEmpty = '';
+let inputStrNull;
 
 describe('App', () => {
     
@@ -77,6 +78,10 @@ describe('App', () => {
         
         it('expects DEFAULT_RESULT for empty input string', ()=> {
             expect(app.processInputStr(inputStrEmpty)).to.equal(App.DEFAULT_RESULT);
+        })
+                
+        it('expects DEFAULT_RESULT for null input string', ()=> {
+            expect(app.processInputStr(inputStrNull)).to.equal(App.DEFAULT_RESULT);
         })
     })
 
