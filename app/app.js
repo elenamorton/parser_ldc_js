@@ -2,6 +2,7 @@ const OUTPUT_SIZE = 15;
 const DOLLAR = '$';
 const POUND = '£'
 const OTHER_CHARS_TO_REMOVE = [4, '_'];
+const DEFAULT_RESULT = '';
 
 class App {
     
@@ -23,7 +24,14 @@ class App {
     processInputStr(str) {
         let removedDup = this.removeDuplicateChars(str);
         let removedExtras = this.removeExtraChars(removedDup, OTHER_CHARS_TO_REMOVE);
-        return this.replaceChars(removedExtras , DOLLAR, POUND);
+        let output = this.replaceChars(removedExtras, DOLLAR, POUND);
+        
+        if (!!output) {
+            return output.length <= OUTPUT_SIZE ? output : output.slice(0, OUTPUT_SIZE)
+        } else {
+            return DEFAULT_RESULT
+        }
+        
     }
     
     static get OUTPUT_SIZE() {
