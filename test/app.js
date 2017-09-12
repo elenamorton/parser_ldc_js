@@ -44,6 +44,10 @@ describe('App', () => {
             expect(app.removeExtraChars(inputStrMixedAlternate, [9, "_"])).to.not.include(9, "_");
         })
         
+        it("removes a 4's and underscores from test input string", () => {
+            expect(app.removeExtraChars(inputStr, [4, "_"])).to.not.include(4, "_");
+        })
+        
     })
     
 })
