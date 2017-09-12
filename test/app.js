@@ -9,7 +9,7 @@ let inputStrLower = 'aacccd91ee';
 let inputStrUpper = 'AAACC91EE';
 let inputStrMixedCase = 'AAAcc91EEff';
 let inputStrMixedAlternate = 'AaAcC91_EeFf';
-
+let inputStrSizeLimit = 'AAAcc4%WWWLq$11i3_843d__K';
 
 describe('App', () => {
     
@@ -62,12 +62,16 @@ describe('App', () => {
     })
     
     describe('check for length of output strings', () => {
-        it('expects max 15 char for the output string with input string larger than 15 chars', ()=> {
-            expect(app.processInputStr(inputStr).length).to.be.at.most(App.OUTPUT_SIZE);
+        it('expects max 15 char for the output string with input and post procesing strings larger than 15 chars', ()=> {
+            expect(app.processInputStr(inputStr).length).to.equal(App.OUTPUT_SIZE);
         })
         
         it('expects less than 15 char for the output string with input string less 15 chars', ()=> {
             expect(app.processInputStr(inputStrMixedAlternate).length).to.be.at.most(App.OUTPUT_SIZE);
+        })
+                
+        it('expects max 15 char for the output string with input string larger 15 but post procesing string less than 15 chars', ()=> {
+            expect(app.processInputStr(inputStrSizeLimit).length).to.be.at.most(App.OUTPUT_SIZE);
         })
         
     })
