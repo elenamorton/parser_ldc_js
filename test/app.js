@@ -8,7 +8,7 @@ let inputStr = 'AAAc91%cWwWkLq$1ci3_848v3d__K';
 let inputStrLower = 'aacccd91ee';
 let inputStrUpper = 'AAACC91EE';
 let inputStrMixedCase = 'AAAcc91EEff';
-let inputStrMixedAlternate = 'AaAcC91EeFf';
+let inputStrMixedAlternate = 'AaAcC91_EeFf';
 
 
 describe('App', () => {
@@ -34,4 +34,12 @@ describe('App', () => {
            expect(app.removeDuplicateChars(inputStr)).to.equal('Ac91%cWwWkLq$1ci3_848v3d_K'); 
         })
     })
+    
+    describe('removes extra characters', () => {
+        it('removes the specified digit value in a string', () => {
+            expect(app.removeExtraChars(inputStrMixedAlternate, [9])).to.equal('AaAcC1_EeFf'); 
+        })  
+        
+    })
+    
 })
