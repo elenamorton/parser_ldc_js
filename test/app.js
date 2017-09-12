@@ -60,6 +60,12 @@ describe('App', () => {
         })
         
     })
+    
+    describe('check for length of output strings', () => {
+        it('expects max 15 char for the output string', ()=> {
+            expect(app.processInput(inputStr)).to.be.at.most(15);
+        })
+    })
 
 
 })
