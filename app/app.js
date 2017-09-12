@@ -10,18 +10,20 @@ class App {
     }
     
     removeExtraChars(str, arrCharsToRemove) {
-        var extraChars = '[' + arrCharsToRemove.join('') + ']';
-        var re = new RegExp(extraChars, "g")
+        let extraChars = '[' + arrCharsToRemove.join('') + ']';
+        let re = new RegExp(extraChars, "g")
         return str.replace(re, "")
     }
     
     replaceChars(str, charToBeChanged, charThatChange) {
-        var re = new RegExp('[' + charToBeChanged + ']', "g");
+        let re = new RegExp('[' + charToBeChanged + ']', "g");
         return str.replace(re, charThatChange)
     }
     
     processInputStr(str) {
-        
+        let removedDup = this.removeDuplicateChars(str);
+        let removedExtras = this.removeExtraChars(removedDup, OTHER_CHARS_TO_REMOVE);
+        return this.replaceChars(removedExtras , DOLLAR, POUND);
     }
     
     static get OUTPUT_SIZE() {
