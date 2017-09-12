@@ -46,6 +46,10 @@ class App {
         return OUTPUT_SIZE;
     }
     
+    static get DEFAULT_RESULT() {
+        return DEFAULT_RESULT;
+    }
+    
 }
 
 module.exports=App;
