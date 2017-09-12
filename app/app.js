@@ -6,7 +6,7 @@ class App {
     }
     
     removeExtraChars(str, arrCharsToRemove) {
-        var extraChars = arrCharsToRemove.join('');
+        var extraChars = '[' + arrCharsToRemove.join('') + ']';
         var re = new RegExp(extraChars, "g")
         return str.replace(re, "")
     }
