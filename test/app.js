@@ -8,6 +8,7 @@ let inputStr = 'AAAc91%cWwWkLq$1ci3_848v3d__K';
 let inputStrLower = 'aacccd91ee';
 let inputStrUpper = 'AAACC91EE';
 let inputStrMixedCase = 'AAAcc91EEff';
+let inputStrMixedAlternate = 'AaAcC91EeFf';
 
 describe('App', () => {
     
@@ -24,6 +25,9 @@ describe('App', () => {
            expect(app.removeDuplicateChars(inputStrMixedCase)).to.equal('Ac91Ef'); 
         })
         
+        it('removes mixed case alternate letters', () => {
+           expect(app.removeDuplicateChars(inputStrMixedAlternate)).to.equal(inputStrMixedAlternate); 
+        })
         
         
     })
