@@ -48,10 +48,18 @@ describe('App', () => {
             expect(app.removeExtraChars(inputStr, [4, "_"])).to.not.include(4, "_");
         })
         
-    it('replaces dollar-sign with pound-sign', () => {
-        expect(app.replaceChars(inputStr, '$', '£')).to.include('£').but.not.include('$');
-    })
-        
     })
     
+    describe('replace a char with another char', () => {
+        it('replaces dollar-sign with pound-sign', () => {
+            expect(app.replaceChars(inputStr, '$', '£')).to.include('£').but.not.include('$');
+        })
+        
+        it('replaces an underscore char with dash char', () => {
+            expect(app.replaceChars(inputStr, '_', '#')).to.include('#').but.not.include('_');
+        })
+        
+    })
+
+
 })
