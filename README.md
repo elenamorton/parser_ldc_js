@@ -37,5 +37,12 @@ Write a program with unit-tests to process a collection of string values which a
 ## Program design
 
 ### Assumptions
+ * Each input string is processed independently;
+ * A default output string is retured in case of null or emplty input string, set as '##@@$$__%__$$@@##' 
 
 ### Implementation
+* This application contains a single class 'App', that defines one main method 'processInputStr', and three helper methods to allow incremental input processing: removal of duplicates 'removeDuplicateChars', removal of extra chars 'removeExtraChars', and replacing certain chars 'replaceChars';
+* There are a set of const values to allow easy setup of the followings: 
+    * output size limit as 'OUTPUT_SIZE';
+    * an array of chars set to be additionally removed as 'OTHER_CHARS_TO_REMOVE', and 
+    * default output string retured in case an empty/null input string is processed as 'DEFAULT_RESULT'.
