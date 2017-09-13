@@ -48,3 +48,4 @@ Write a program with unit-tests to process a collection of string values which a
     * default output string retured in case an empty/null input string is processed as 'DEFAULT_RESULT'.
 
 ### Test results
+![Test results](./test_run_parser.png)
