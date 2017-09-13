@@ -1,6 +1,6 @@
 # Strings Collections parsing
 
-## Usage Instructions
+## 1. Usage Instructions
 * clone the repo and install Node.js modules
 ```shell
 $ git clone https://github.com/elenamorton/parser_ldc_js.git
@@ -15,13 +15,13 @@ $ npm test
 ```shell
 $ npm start
 ```
-### Used Technologies
+#### Used Technologies
 * Vanilla JavaScript ES6
 * NodeJS v6.11.2
 * Npm v3.10.10
 * Test suite based on Mocha(v3.5.3), Chai(v4.1.2)
 
-### Requirements
+## 2. Requirements
 
 Write a program with unit-tests to process a collection of string values which are passed to a method which returns a collection of processed strings. Code should be test-driven, efficient, re-usable and loosely coupled.
 
@@ -34,7 +34,7 @@ Write a program with unit-tests to process a collection of string values which a
  * Output strings must not be null or empty string;
  * Output strings should be truncated to max length of 15 chars. 
 
-## Program design
+## 3. Program design
 
 ### Assumptions
  * Each input string is processed independently;
@@ -46,3 +46,5 @@ Write a program with unit-tests to process a collection of string values which a
     * output size limit as 'OUTPUT_SIZE';
     * an array of chars set to be additionally removed as 'OTHER_CHARS_TO_REMOVE', and 
     * default output string retured in case an empty/null input string is processed as 'DEFAULT_RESULT'.
+
+### Test results
